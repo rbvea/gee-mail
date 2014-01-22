@@ -11,7 +11,9 @@ angular.module('starter.controllers', [])
 
 
 // A simple controller that shows a tapped item's data
-.controller('messageDetailCtrl', function($scope, $stateParams, MessageService) {
+.controller('messageDetailCtrl', function($scope, $stateParams, MessageService, $log) {
   // "Pets" is a service returning mock data (services.js)
-  $scope.message = MessageService.get($stateParams.petId);
+  var message = MessageService.get($stateParams.messageId);
+  $log.error(message);
+  $scope.message = message
 });

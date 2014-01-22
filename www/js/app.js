@@ -36,10 +36,10 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
       })
 
       .state('tab.message-detail', {
-        url: '/message/:petid',
+        url: '/message/:messageId',
         views: {
           'messages-tab': {
-            templateUrl: 'templates/pet-detail.html',
+            templateUrl: 'templates/message-detail.html',
             controller: 'messageDetailCtrl'
           }
         }

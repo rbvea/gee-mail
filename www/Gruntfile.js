@@ -24,22 +24,8 @@ module.exports = function(grunt) {
         }
       } 
     },
-
-    jslint: {
-      app : {
-        options : {
-          errorsOnly: true
-        },
-        src: ['js/*.js'],
-      }
-    },
     watch: {
       grunt: { files: ['Gruntfile.js'] },
-
-      jslint: {
-        files: ['app/js/*.js'],
-        tasks:['jslint']
-      },
       sass: {
         files: ['scss/**/*.scss'],
         tasks: ['sass']
@@ -48,10 +34,9 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-jslint');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('build', ['jslint', 'sass:dist']);
+  grunt.registerTask('build', ['sass:dist', 'sass:ionic']);
   grunt.registerTask('ion', ['sass:ionic']);
 
   grunt.registerTask('default', ['build','watch']);

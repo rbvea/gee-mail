@@ -5,9 +5,10 @@
 -->
 <view title="'Gee-Mail'">
   <content has-header="true" has-tabs="true">
-    <list>
-      <item ng-repeat="message in messages" type="item-text-wrap" href="#/tab/message/{{message.id}}">
-        <h3>{{message.sender}}</h3>
+    <div class="list">
+      <a class="item item-avatar" ng-repeat="message in messages" type="item-text-wrap" href="#/tab/message/{{message.id}}">
+        <img src="http://placehold.it/200x200"/>
+        <h2>{{message.sender}}</h3>
         <p>{{message.subject}}</p>
         </item>
       </item>
