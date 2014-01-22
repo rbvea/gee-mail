@@ -1,6 +1,11 @@
 # GeeMail 
 
-GeeMail is a coding exercise meant to simulate an e-mail web application inbox.
+GeeMail is a coding exercise meant to simulate an e-mail 
+web application inbox.  
+
+##Ionic branch
+
+This branch is an experimental branch using the [Ionic Framework](http://ionicframework.com/) to build it as a mobile app.  To run this on your computer point your web server to the www directory, or you can use [Apache Cordova](https://cordova.apache.org/) to build this for your device.
 
 ## Description
 
